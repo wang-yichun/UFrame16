@@ -176,6 +176,8 @@ namespace uFrame.ExampleProject {
         
         private P<String> _PasswordProperty;
         
+        private P<String> _ErrorMessageProperty;
+        
         private Signal<LoginCommand> _Login;
         
         public LoginScreenViewModelBase(uFrame.Kernel.IEventAggregator aggregator) : 
@@ -200,6 +202,15 @@ namespace uFrame.ExampleProject {
             }
         }
         
+        public virtual P<String> ErrorMessageProperty {
+            get {
+                return _ErrorMessageProperty;
+            }
+            set {
+                _ErrorMessageProperty = value;
+            }
+        }
+        
         public virtual String Username {
             get {
                 return UsernameProperty.Value;
@@ -218,6 +229,15 @@ namespace uFrame.ExampleProject {
             }
         }
         
+        public virtual String ErrorMessage {
+            get {
+                return ErrorMessageProperty.Value;
+            }
+            set {
+                ErrorMessageProperty.Value = value;
+            }
+        }
+        
         public virtual Signal<LoginCommand> Login {
             get {
                 return _Login;
@@ -232,6 +252,7 @@ namespace uFrame.ExampleProject {
             this.Login = new Signal<LoginCommand>(this);
             _UsernameProperty = new P<String>(this, "Username");
             _PasswordProperty = new P<String>(this, "Password");
+            _ErrorMessageProperty = new P<String>(this, "ErrorMessage");
         }
         
         public override void Read(ISerializerStream stream) {
@@ -253,6 +274,8 @@ namespace uFrame.ExampleProject {
             list.Add(new ViewModelPropertyInfo(_UsernameProperty, false, false, false, false));
             // PropertiesChildItem
             list.Add(new ViewModelPropertyInfo(_PasswordProperty, false, false, false, false));
+            // PropertiesChildItem
+            list.Add(new ViewModelPropertyInfo(_ErrorMessageProperty, false, false, false, false));
         }
     }
     
