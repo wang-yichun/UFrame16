@@ -16,27 +16,33 @@ namespace uFrame.ExampleProject
  * This controller shows how to use direct service reference, instead of events.
  * 
  */
+	public class LoginScreenController : LoginScreenControllerBase
+	{
 
-    public class LoginScreenController : LoginScreenControllerBase
-    {
-
-        /*
+	/*
      * Directly inject desired service. Notice that you introduce some coupling this way.
      */
-        [Inject] public UserManagementService UserManagementService;
+		[Inject]
+		public UserManagementService UserManagementService;
 
-        public override void InitializeLoginScreen(LoginScreenViewModel viewModel)
-        {
-            base.InitializeLoginScreen(viewModel);
-            // This is called when a LoginScreenViewModel is created
-        }
+		public override void InitializeLoginScreen (LoginScreenViewModel viewModel)
+		{
+			base.InitializeLoginScreen (viewModel);
+			// This is called when a LoginScreenViewModel is created
+		}
 
-        public override void Login(LoginScreenViewModel viewModel)
-        {
-            base.Login(viewModel);
-            /* Direct call to the service. */
-            UserManagementService.AuthorizeLocalUser(viewModel.Username, viewModel.Password);
-        }
+		public override void Login (LoginScreenViewModel viewModel)
+		{
+			base.Login (viewModel);
+			/* Direct call to the service. */
+			UserManagementService.AuthorizeLocalUser (viewModel.Username, viewModel.Password);
 
-    }
+			if (UserManagementService.LocalUser.AuthorizationState != AuthorizationState.Authorized) {
+				viewModel.ErrorMessage = "Failed to login! Incorrect username or password!";
+			} else {
+				viewModel.ErrorMessage = string.Empty;
+			}
+		}
+
+	}
 }
