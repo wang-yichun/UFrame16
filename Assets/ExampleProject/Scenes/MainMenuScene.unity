@@ -680,6 +680,7 @@ MonoBehaviour:
   _BindClose: 0
   _CloseButton: {fileID: 0}
   ScreenUIContainer: {fileID: 719033616}
+  ScreenUIContainerCanvasGroup: {fileID: 0}
   LevelSelectButton: {fileID: 1744464025}
   SettingsButton: {fileID: 1650228377}
   ExitButton: {fileID: 607333071}
@@ -1761,6 +1762,7 @@ MonoBehaviour:
   _BindClose: 1
   _CloseButton: {fileID: 1869721893}
   ScreenUIContainer: {fileID: 149436432}
+  ScreenUIContainerCanvasGroup: {fileID: 0}
   _Volume: 0
   _BindVolume: 1
   _VolumeSlider: {fileID: 23848484}
@@ -2312,6 +2314,7 @@ MonoBehaviour:
   _BindClose: 0
   _CloseButton: {fileID: 0}
   ScreenUIContainer: {fileID: 1264056615}
+  ScreenUIContainerCanvasGroup: {fileID: 0}
   _Username: 
   _Password: 
   _ErrorMessage: 
@@ -2493,6 +2496,7 @@ MonoBehaviour:
   _BindClose: 1
   _CloseButton: {fileID: 1687174898}
   ScreenUIContainer: {fileID: 1877750513}
+  ScreenUIContainerCanvasGroup: {fileID: 0}
   _BindAvailableLevels: 1
   LevelListItemPrefab: {fileID: 195094, guid: 79e704ec0202a244682adee0e2432a1e, type: 2}
   LevelListContainer: {fileID: 787024355}
