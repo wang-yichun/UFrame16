@@ -68,14 +68,22 @@ namespace uFrame.ExampleProject
 				FadeAlpha (ScreenUIContainerCanvasGroup, targetAlpha, time, null, delay);
 			} else {
 				//fade out
-				FadeAlpha (ScreenUIContainerCanvasGroup, targetAlpha, time, () =>
-				{
-					//on complete, maintain consistant active status of the gameObject:
-					//This prevents glitches, if IsActive property changes too fast
-					ScreenUIContainer.gameObject.SetActive (SubScreen.IsActive);
-				}, delay);
+
+				var onCompleteAction = new Action(this.fadeAlphaOnComplete);
+				FadeAlpha (ScreenUIContainerCanvasGroup, targetAlpha, time, onCompleteAction, delay);
+
+//				FadeAlpha (ScreenUIContainerCanvasGroup, targetAlpha, time, () =>
+//				{
+//					//on complete, maintain consistant active status of the gameObject:
+//					//This prevents glitches, if IsActive property changes too fast
+//					ScreenUIContainer.gameObject.SetActive (SubScreen.IsActive);
+//				}, delay);
 			}
 //			ScreenUIContainer.gameObject.SetActive (active);
+		}
+
+		void fadeAlphaOnComplete () {
+			ScreenUIContainer.gameObject.SetActive (SubScreen.IsActive);
 		}
 
 		/**
