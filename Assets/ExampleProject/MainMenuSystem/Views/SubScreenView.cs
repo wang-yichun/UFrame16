@@ -69,8 +69,14 @@ namespace uFrame.ExampleProject
 			} else {
 				//fade out
 
+				// Common method
 				var onCompleteAction = new Action(this.fadeAlphaOnComplete);
 				FadeAlpha (ScreenUIContainerCanvasGroup, targetAlpha, time, onCompleteAction, delay);
+
+				// Anonymous method
+//				FadeAlpha (ScreenUIContainerCanvasGroup, targetAlpha, time, delegate() {
+//					ScreenUIContainer.gameObject.SetActive (SubScreen.IsActive);
+//				});
 
 //				FadeAlpha (ScreenUIContainerCanvasGroup, targetAlpha, time, () =>
 //				{
@@ -82,6 +88,7 @@ namespace uFrame.ExampleProject
 //			ScreenUIContainer.gameObject.SetActive (active);
 		}
 
+		// Common method
 		void fadeAlphaOnComplete () {
 			ScreenUIContainer.gameObject.SetActive (SubScreen.IsActive);
 		}
