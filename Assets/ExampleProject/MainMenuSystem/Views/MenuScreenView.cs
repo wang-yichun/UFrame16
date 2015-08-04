@@ -13,48 +13,52 @@ using UnityEngine.UI;
 
 namespace uFrame.ExampleProject
 {
-    public class MenuScreenView : MenuScreenViewBase
-    {
+	public class MenuScreenView : MenuScreenViewBase
+	{
 
-        public Button LevelSelectButton;
-        public Button SettingsButton;
-        public Button ExitButton;
+		public Button LevelSelectButton;
+		public Button SettingsButton;
+		public Button ExitButton;
 
-        protected override void InitializeViewModel(uFrame.MVVM.ViewModel model)
-        {
-            base.InitializeViewModel(model);
-        }
+		protected override void InitializeViewModel (uFrame.MVVM.ViewModel model)
+		{
+			base.InitializeViewModel (model);
+		}
 
-        public override void Bind()
-        {
-            base.Bind();
+		public override void Bind ()
+		{
+			base.Bind ();
 
-            // Bind each button to handler:
-            // When button is clicked, handler is excuted
-            // Ex: When we press LevelSelectButton, we publish
-            // RequestMainMenuScreenCommand and pass LevelSelectScreenViewModel type
-            this.BindButtonToHandler(LevelSelectButton, () =>
-            {
-                Publish(new RequestMainMenuScreenCommand()
-                {
-                    ScreenType = typeof (LevelSelectScreenViewModel)
-                });
-            });
+			// Bind each button to handler:
+			// When button is clicked, handler is excuted
+			// Ex: When we press LevelSelectButton, we publish
+			// RequestMainMenuScreenCommand and pass LevelSelectScreenViewModel type
+			this.BindButtonToHandler (LevelSelectButton, () =>
+			{
+//                Publish(new RequestMainMenuScreenCommand()
+//                {
+//                    ScreenType = typeof (LevelSelectScreenViewModel)
+//                });
+				RequestMainMenuScreenCommand command = new RequestMainMenuScreenCommand();
+				command.ScreenType = typeof(LevelSelectScreenViewModel);
+				Publish(command);
 
-            this.BindButtonToHandler(SettingsButton, () =>
-            {
-                Publish(new RequestMainMenuScreenCommand()
+			});
+
+			this.BindButtonToHandler (SettingsButton, () =>
+			{
+				Publish (new RequestMainMenuScreenCommand ()
                 {
                     ScreenType = typeof (SettingsScreenViewModel)
                 });
-            });
+			});
 
-            // This follows the same logic, but we use Method Group syntax.
-            // And we do not publish event. We just quit.
-            this.BindButtonToHandler(ExitButton, Application.Quit);
-            //Equivalent to 
-            //this.BindButtonToHandler(ExitButton, () => { Application.Quit; });
+			// This follows the same logic, but we use Method Group syntax.
+			// And we do not publish event. We just quit.
+			this.BindButtonToHandler (ExitButton, Application.Quit);
+			//Equivalent to 
+			//this.BindButtonToHandler(ExitButton, () => { Application.Quit; });
 
-        }
-    }
+		}
+	}
 }
