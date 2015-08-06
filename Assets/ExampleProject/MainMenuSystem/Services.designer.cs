@@ -29,10 +29,7 @@ namespace uFrame.ExampleProject {
         /// </summary>
         public override void Setup() {
             base.Setup();
-//            this.OnEvent<RequestMainMenuScreenCommand>().Subscribe(this.RequestMainMenuScreenCommandHandler);
-			this.OnEvent<RequestMainMenuScreenCommand> ().Subscribe (evt => {
-				this.RequestMainMenuScreenCommandHandler(evt);
-			});
+            this.OnEvent<RequestMainMenuScreenCommand>().Subscribe(this.RequestMainMenuScreenCommandHandler);
         }
         
         /// <summary>
