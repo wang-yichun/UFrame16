@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _KernelScene: 
-  Id: 0
+  Id: 3
 --- !u!4 &1642038739
 Transform:
   m_ObjectHideFlags: 0

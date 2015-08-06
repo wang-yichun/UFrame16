@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11497276}
   - 114: {fileID: 11462212}
   - 114: {fileID: 11450204}
+  - 114: {fileID: 11461478}
   m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
@@ -274,6 +275,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082a9961fa040f548a25d296a22972b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11461478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78595bd9e11a6a449ad3d901b48e3b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 3
+  Title: 'Level 4: Come Back!'
+  Description: This Level was succesfully created.
+  LevelScene: Level4
+  IsLocked: 0
 --- !u!114 &11462212
 MonoBehaviour:
   m_ObjectHideFlags: 1

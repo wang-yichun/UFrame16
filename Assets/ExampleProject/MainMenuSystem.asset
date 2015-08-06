@@ -14,7 +14,7 @@ MonoBehaviour:
   _jsonData: '{"Name":"MainMenuSystem", "Version":"1.501", "Identifier":"ab48957a-d215-4dac-94a2-4599718fb01d",
     "Type":"Invert.uFrame.MVVM.SubsystemGraph", "DocumentationMode":"false", "RootNode":{"_CLRType":"Invert.uFrame.MVVM.SubsystemNode,
     Invert.uFrame.MVVM, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "Name":"MainMenuSystem",
-    "IsCollapsed":"true", "Identifier":"cb96832b-935a-488b-860f-69423b891e03", "Items":[
+    "IsCollapsed":"false", "Identifier":"cb96832b-935a-488b-860f-69423b891e03", "Items":[
     {"_CLRType":"Invert.uFrame.MVVM.InstancesReference, Invert.uFrame.MVVM, Version=1.0.0.0,
     Culture=neutral, PublicKeyToken=null", "Name":"MainMenuRoot", "Identifier":"60b00ffe-1ddd-42c9-9fa5-2bc2900344da",
     "Precompiled":"false", "Flags":{"_CLRType":"true"}, "DataBag":{"_CLRType":"Invert.Core.GraphDesigner.DataBag,
@@ -61,7 +61,7 @@ MonoBehaviour:
     "e40514ea-aa20-4d76-82ff-b2267ddab13b":"false", "f5adc093-fc63-4af8-8b84-ea1a89cfb9aa":"false",
     "d3f620c7-f6ab-4907-bf1f-64e03816dafc":"false", "b608e2db-fe50-403a-9abc-519d7a61fa09":"false",
     "3d07d786-d189-46ac-9931-dee1f36516d9":"true", "46be0954-5465-4970-b81f-2a0d1462e513":"true",
-    "d3adbf0e-9e3f-40b1-b652-3d89f420f759":"true", "011756d6-198f-4437-9e0a-ec09b2540231":"true",
+    "d3adbf0e-9e3f-40b1-b652-3d89f420f759":"true", "011756d6-198f-4437-9e0a-ec09b2540231":"false",
     "cb96832b-935a-488b-860f-69423b891e03":"false"}, "Flags":{"_CLRType":"true"},
     "DataBag":{"_CLRType":"Invert.Core.GraphDesigner.DataBag, Invert.Core.GraphDesigner,
     Version=1.1.0.0, Culture=neutral, PublicKeyToken=null"}, "IsNewNode":"false"},
@@ -356,7 +356,7 @@ MonoBehaviour:
     "DataBag":{"_CLRType":"Invert.Core.GraphDesigner.DataBag, Invert.Core.GraphDesigner,
     Version=1.1.0.0, Culture=neutral, PublicKeyToken=null"}, "IsNewNode":"false"},
     {"_CLRType":"Invert.uFrame.MVVM.ElementNode, Invert.uFrame.MVVM, Version=1.0.0.0,
-    Culture=neutral, PublicKeyToken=null", "Name":"MenuScreen", "IsCollapsed":"true",
+    Culture=neutral, PublicKeyToken=null", "Name":"MenuScreen", "IsCollapsed":"false",
     "Identifier":"011756d6-198f-4437-9e0a-ec09b2540231", "Items":[  ], "CollapsedValues":{"dd5d6ab6-3526-4148-ac75-b1c2c8a5ebbc":"false",
     "2aa65ba0-b5b6-4761-a149-69b9a1a2820b":"false", "e656401a-dd99-4901-91b5-8ab5a32e2ebe":"false",
     "55ccf704-872b-4512-8799-a7177ac2c442":"false", "559cc138-7fc6-48b1-8370-032b2cccb979":"false",
