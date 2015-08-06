@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/ExampleProject/Scenes/IntroScene.unity
   - enabled: 1
     path: Assets/ExampleProject/Scenes/AssetsLoadingScene.unity
+  - enabled: 1
+    path: Assets/ExampleProject/Scenes/Level4.unity
