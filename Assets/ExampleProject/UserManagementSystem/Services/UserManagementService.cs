@@ -10,26 +10,28 @@ using uFrame.MVVM;
 
 namespace uFrame.ExampleProject
 {
-    public class UserManagementService : UserManagementServiceBase
-    {
+	public class UserManagementService : UserManagementServiceBase
+	{
 
-        [Inject("LocalUser")] public UserViewModel LocalUser;
+		[Inject("LocalUser")]
+		public UserViewModel
+			LocalUser;
 
-        public override void Setup()
-        {
-            base.Setup();
-            LocalUser.AuthorizationState = AuthorizationState.Unauthorized;
-        }
+		public override void Setup ()
+		{
+			base.Setup ();
+			LocalUser.AuthorizationState = AuthorizationState.Unauthorized;
+		}
 
-        public void AuthorizeLocalUser(string Username, string Password)
-        {
-            if (Username == "uframe" && Password == "uframe")
-            {
-                Debug.Log("authorized in service");
-                LocalUser.AuthorizationState = AuthorizationState.Authorized;
-            }
-        }
+		public void AuthorizeLocalUser (string Username, string Password)
+		{
+			if (Username == "uframe" && Password == "uframe") {
+				Debug.Log ("authorized in service");
+				LocalUser.Username = Username;
+				LocalUser.AuthorizationState = AuthorizationState.Authorized;
+			}
+		}
 
 
-    }
+	}
 }
